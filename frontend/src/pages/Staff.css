@@ -1,0 +1,403 @@
+.staff-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.staff-card {
+  width: 100%;
+  max-width: 760px;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(31, 41, 55, 0.12);
+}
+
+.login-card {
+  max-width: 480px;
+}
+
+.staff-eyebrow {
+  margin: 0 0 8px;
+  color: #176b87;
+  font-weight: 700;
+}
+
+.staff-card h1,
+.staff-card h2 {
+  margin: 0;
+  color: #1f2937;
+}
+
+.staff-card h2 {
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+
+.staff-description {
+  margin: 16px 0 28px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.staff-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.staff-form label {
+  font-weight: 700;
+}
+
+.staff-form input {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.staff-primary-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  background-color: #176b87;
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.staff-primary-button:hover {
+  background-color: #12566d;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.room-badge {
+  white-space: nowrap;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background-color: #e8f3f6;
+  color: #176b87;
+  font-weight: 700;
+}
+
+.serving-section {
+  margin-bottom: 28px;
+  padding: 24px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #176b87;
+  color: #ffffff;
+}
+
+.serving-section p {
+  margin: 0 0 6px;
+}
+
+.serving-section strong {
+  font-size: 2.2rem;
+}
+
+.waiting-list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.waiting-list span {
+  padding: 10px 16px;
+  border-radius: 6px;
+  background-color: #e8f3f6;
+  color: #176b87;
+  font-weight: 700;
+}
+
+.dashboard-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.dashboard-metrics div {
+  padding: 16px;
+  border: 1px solid #dbe7ec;
+  border-radius: 8px;
+}
+
+.dashboard-metrics span {
+  display: block;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.dashboard-metrics strong {
+  display: block;
+  margin-top: 8px;
+  color: #176b87;
+}
+
+.staff-primary-button:disabled,
+.cancel-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.staff-secondary-button,
+.tab-button,
+.cancel-button {
+  padding: 8px 14px;
+  border: 1px solid #176b87;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #176b87;
+  font: inherit;
+  cursor: pointer;
+}
+
+.cancel-button {
+  margin-left: auto;
+  border-color: #b91c1c;
+  color: #b91c1c;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.department-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.tab-button.active {
+  background-color: #176b87;
+  color: #ffffff;
+}
+
+.staff-message {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background-color: #e6f4ea;
+  color: #166534;
+  font-weight: 700;
+}
+
+.waiting-rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.waiting-rows li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5edf1;
+}
+
+.waiting-rows .position {
+  min-width: 32px;
+  color: #6b7280;
+}
+
+.waiting-rows .patient-name {
+  color: #4b5563;
+}
+
+.waiting-rows .wait-estimate {
+  margin-left: auto;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.waiting-rows .cancel-button {
+  margin-left: 0;
+}
+
+.action-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.action-row .staff-primary-button {
+  margin-top: 0;
+}
+
+/* Complete & Call Next is the main action, so it stands out from the other two. */
+.action-row .staff-primary-button:last-child {
+  background-color: #15803d;
+  font-weight: 700;
+}
+
+.action-row .staff-primary-button:last-child:hover:not(:disabled) {
+  background-color: #166534;
+}
+
+.staff-card.wide {
+  max-width: 980px;
+}
+
+.staff-note {
+  margin: 12px 0 0;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .staff-page {
+    padding: 16px;
+  }
+
+  .staff-card {
+    padding: 28px 20px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+  }
+
+  .dashboard-metrics,
+  .action-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.stats-grid div {
+  padding: 16px;
+  border: 1px solid #dbe7ec;
+  border-radius: 8px;
+}
+
+.stats-grid span {
+  display: block;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.stats-grid strong {
+  display: block;
+  margin-top: 8px;
+  color: #176b87;
+  font-size: 1.3rem;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.table-scroll + h2 {
+  margin-top: 28px;
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.stats-table th,
+.stats-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #e5edf1;
+  white-space: nowrap;
+}
+
+.hour-bars {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hour-bars li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 0;
+}
+
+.hour-label {
+  min-width: 110px;
+  color: #4b5563;
+}
+
+.hour-track {
+  flex: 1;
+  min-width: 0;
+}
+
+.hour-bar {
+  display: block;
+  height: 14px;
+  min-width: 4px;
+  border-radius: 4px;
+  background-color: #176b87;
+}
+
+.hour-count {
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Small screens: let the header buttons and each waiting row wrap instead of overflowing. */
+.header-actions {
+  flex-wrap: wrap;
+}
+
+.waiting-rows li {
+  flex-wrap: wrap;
+  row-gap: 6px;
+}
+
+.waiting-rows strong,
+.waiting-rows .wait-estimate {
+  white-space: nowrap;
+}
+
+.waiting-rows .patient-name {
+  flex: 1 1 120px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .staff-card h1 {
+    font-size: 1.6rem;
+  }
+
+  .dashboard-header {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,39 @@
+/* Pages keep their own full-height layout; the bar sits in the space reserved above them. */
+.app-shell {
+  position: relative;
+  padding-top: 56px;
+}
+
+.app-shell .home-page,
+.app-shell .patient-page,
+.app-shell .staff-page {
+  min-height: calc(100vh - 56px);
+}
+
+.history-buttons {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.history-buttons button {
+  padding: 6px 14px;
+  border: 1px solid #176b87;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #176b87;
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.history-buttons button:hover:not(:disabled) {
+  background-color: #e8f3f6;
+}
+
+.history-buttons button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

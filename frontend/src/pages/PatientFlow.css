@@ -1,0 +1,216 @@
+.patient-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.patient-card {
+  width: 100%;
+  max-width: 620px;
+  padding: 40px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(31, 41, 55, 0.12);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #176b87;
+  font-weight: 700;
+}
+
+.patient-card h1 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 2rem;
+}
+
+.page-description {
+  margin: 16px 0 28px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.primary-button,
+.department-button {
+  border: none;
+  border-radius: 6px;
+  background-color: #176b87;
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.primary-button {
+  padding: 12px 24px;
+}
+
+.primary-button:hover,
+.department-button:hover {
+  background-color: #12566d;
+}
+
+.department-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.department-button {
+  padding: 20px 12px;
+  background-color: #e8f3f6;
+  color: #176b87;
+  font-weight: 700;
+}
+
+.department-button:hover {
+  color: #ffffff;
+}
+
+.patient-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 8px;
+}
+
+.patient-form label {
+  margin-top: 8px;
+  font-weight: 700;
+}
+
+.patient-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.patient-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #ffffff;
+  font: inherit;
+}
+
+.error-message {
+  margin: 16px 0;
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.patient-form .primary-button {
+  margin-top: 20px;
+}
+
+.token-box {
+  margin: 24px auto;
+  padding: 20px;
+  border: 2px solid #176b87;
+  border-radius: 8px;
+}
+
+.token-box span,
+.queue-item span {
+  display: block;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.token-box strong {
+  display: block;
+  margin-top: 6px;
+  color: #176b87;
+  font-size: 2rem;
+}
+
+.token-details {
+  margin: 8px 0;
+}
+
+.token-details + .primary-button {
+  margin-top: 24px;
+}
+
+.queue-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  text-align: left;
+}
+
+.queue-item {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #e8f3f6;
+}
+
+.queue-item strong {
+  display: block;
+  margin-top: 6px;
+  color: #176b87;
+}
+
+.field-error {
+  margin: 0;
+  color: #b91c1c;
+  font-size: 0.9rem;
+}
+
+.patient-form input[aria-invalid='true'],
+.patient-form select[aria-invalid='true'] {
+  border-color: #b91c1c;
+}
+
+.success-message {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background-color: #e6f4ea;
+  color: #166534;
+  font-weight: 700;
+}
+
+.status-message {
+  margin: 24px 0 0;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.estimate-note {
+  margin: 24px 0 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 560px) {
+  .patient-page {
+    padding: 16px;
+  }
+
+  .patient-card {
+    padding: 32px 20px;
+  }
+
+  .patient-card h1 {
+    font-size: 1.7rem;
+  }
+
+  .department-list {
+    grid-template-columns: 1fr;
+  }
+
+  .queue-item {
+    padding: 12px;
+  }
+
+  .primary-button {
+    width: 100%;
+  }
+}
