@@ -30,6 +30,8 @@ waiting-room TV. It also shows an **estimated waiting time** and simple **statis
 - Statistics: totals, department-wise numbers, peak hours
 - Python analytics script for historical analysis
 - Responsive design (desktop, laptop, tablet, mobile)
+- Dark "high-tech" theme (dark background, red actions, gold highlights, cyan live-queue glow). All colours are CSS
+  variables at the top of `frontend/src/index.css`, so the look can be changed in one place
 - Normal web-app navigation: every page has its own URL, the **← Back / Forward →** buttons and the browser's own
   Back/Forward buttons move between SmartOPD pages, and refreshing keeps you on the same page (see "Navigation" below)
 

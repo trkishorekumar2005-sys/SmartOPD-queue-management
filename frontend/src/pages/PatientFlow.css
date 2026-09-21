@@ -11,26 +11,29 @@
   max-width: 620px;
   padding: 40px;
   text-align: center;
-  background-color: #ffffff;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--primary);
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(31, 41, 55, 0.12);
+  box-shadow: var(--card-shadow);
 }
 
 .eyebrow {
   margin: 0 0 8px;
-  color: #176b87;
+  color: var(--gold);
   font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 .patient-card h1 {
   margin: 0;
-  color: #1f2937;
+  color: var(--text);
   font-size: 2rem;
 }
 
 .page-description {
   margin: 16px 0 28px;
-  color: #4b5563;
+  color: var(--text-muted);
   line-height: 1.5;
 }
 
@@ -38,9 +41,10 @@
 .department-button {
   border: none;
   border-radius: 6px;
-  background-color: #176b87;
-  color: #ffffff;
+  background-color: var(--primary-action);
+  color: var(--on-primary);
   font: inherit;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -50,7 +54,7 @@
 
 .primary-button:hover,
 .department-button:hover {
-  background-color: #12566d;
+  background-color: var(--primary-hover);
 }
 
 .department-list {
@@ -61,13 +65,15 @@
 
 .department-button {
   padding: 20px 12px;
-  background-color: #e8f3f6;
-  color: #176b87;
+  border: 1px solid var(--border-strong);
+  background-color: var(--surface-2);
+  color: var(--text);
   font-weight: 700;
 }
 
 .department-button:hover {
-  color: #ffffff;
+  border-color: var(--primary);
+  color: var(--on-primary);
 }
 
 .patient-form {
@@ -85,23 +91,35 @@
 .patient-form input {
   width: 100%;
   padding: 12px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid var(--border-strong);
   border-radius: 6px;
+  background-color: var(--bg);
+  color: var(--text);
   font: inherit;
+}
+
+.patient-form input::placeholder {
+  color: var(--text-muted);
+}
+
+.patient-form input:focus,
+.patient-form select:focus {
+  border-color: var(--cyan);
 }
 
 .patient-form select {
   width: 100%;
   padding: 12px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid var(--border-strong);
   border-radius: 6px;
-  background-color: #ffffff;
+  background-color: var(--bg);
+  color: var(--text);
   font: inherit;
 }
 
 .error-message {
   margin: 16px 0;
-  color: #b91c1c;
+  color: var(--danger-text);
   font-weight: 700;
 }
 
@@ -112,21 +130,23 @@
 .token-box {
   margin: 24px auto;
   padding: 20px;
-  border: 2px solid #176b87;
+  border: 2px solid var(--cyan);
   border-radius: 8px;
+  background-color: var(--surface-2);
+  box-shadow: var(--cyan-glow);
 }
 
-.token-box span,
-.queue-item span {
+.token-box > span,
+.queue-item > span {
   display: block;
-  color: #4b5563;
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
 .token-box strong {
   display: block;
   margin-top: 6px;
-  color: #176b87;
+  color: var(--cyan);
   font-size: 2rem;
 }
 
@@ -147,45 +167,46 @@
 
 .queue-item {
   padding: 16px;
+  border: 1px solid var(--border);
   border-radius: 8px;
-  background-color: #e8f3f6;
+  background-color: var(--surface-2);
 }
 
 .queue-item strong {
   display: block;
   margin-top: 6px;
-  color: #176b87;
+  color: var(--cyan);
 }
 
 .field-error {
   margin: 0;
-  color: #b91c1c;
+  color: var(--danger-text);
   font-size: 0.9rem;
 }
 
 .patient-form input[aria-invalid='true'],
 .patient-form select[aria-invalid='true'] {
-  border-color: #b91c1c;
+  border-color: var(--primary);
 }
 
 .success-message {
   margin: 0 0 16px;
   padding: 10px 12px;
   border-radius: 6px;
-  background-color: #e6f4ea;
-  color: #166534;
+  background-color: var(--success-soft);
+  color: var(--success);
   font-weight: 700;
 }
 
 .status-message {
   margin: 24px 0 0;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--text);
 }
 
 .estimate-note {
   margin: 24px 0 0;
-  color: #6b7280;
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 

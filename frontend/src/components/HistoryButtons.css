@@ -20,17 +20,18 @@
 
 .history-buttons button {
   padding: 6px 14px;
-  border: 1px solid #176b87;
+  border: 1px solid var(--border-strong);
   border-radius: 6px;
-  background-color: #ffffff;
-  color: #176b87;
+  background-color: var(--surface);
+  color: var(--text);
   font: inherit;
   font-size: 0.95rem;
   cursor: pointer;
 }
 
 .history-buttons button:hover:not(:disabled) {
-  background-color: #e8f3f6;
+  border-color: var(--cyan);
+  color: var(--cyan);
 }
 
 .history-buttons button:disabled {

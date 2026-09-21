@@ -1,19 +1,24 @@
 .display-screen {
   min-height: 100vh;
   padding: 5vh 6vw;
-  background: #0b2e3b;
-  color: #ffffff;
+  background: var(--bg);
+  color: var(--text);
   text-align: center;
 }
 
 .display-screen h1 {
   margin: 0;
+  color: var(--text);
   font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: 0.04em;
 }
 
 .display-screen header p {
   margin: 12px 0 7vh;
+  color: var(--gold);
   font-size: clamp(1.2rem, 2.5vw, 2rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .display-grid {
@@ -24,25 +29,36 @@
 
 .display-department {
   padding: 36px;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--gold);
   border-radius: 16px;
-  background: #ffffff;
-  color: #16313a;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--card-shadow);
 }
 
 .display-department h2 { margin-top: 0; font-size: clamp(1.5rem, 3vw, 2.6rem); }
-.display-department p { margin: 26px 0 6px; color: #47646c; font-weight: 700; }
-.display-department strong { color: #176b87; font-size: clamp(3rem, 8vw, 7rem); }
+.display-department p { margin: 26px 0 6px; color: var(--text-muted); font-weight: 700; letter-spacing: 0.06em; }
+
+/* Live queue information glows softly in arc-reactor cyan. */
+.display-department strong {
+  color: var(--cyan);
+  font-size: clamp(3rem, 8vw, 7rem);
+  text-shadow: var(--cyan-text-glow);
+}
+
 .display-department b { font-size: clamp(2rem, 5vw, 4rem); }
 
 .display-department .display-message {
   margin: 28px 0 0;
-  color: #176b87;
+  color: var(--gold);
   font-size: clamp(1rem, 2vw, 1.5rem);
+  letter-spacing: normal;
 }
 
 .display-screen .display-warning {
   margin: -4vh 0 3vh;
-  color: #fbbf24;
+  color: var(--gold);
   font-weight: 700;
 }
 
@@ -56,12 +72,16 @@
 
 .voice-button {
   padding: 8px 16px;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--gold);
   border-radius: 6px;
   background: transparent;
-  color: #ffffff;
+  color: var(--gold);
   font: inherit;
   cursor: pointer;
+}
+
+.voice-button:hover {
+  background: var(--gold-soft);
 }
 
 @media (max-width: 700px) {

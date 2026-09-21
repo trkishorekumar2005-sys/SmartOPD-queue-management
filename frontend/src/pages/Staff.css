@@ -10,9 +10,11 @@
   width: 100%;
   max-width: 760px;
   padding: 40px;
-  background-color: #ffffff;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--primary);
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(31, 41, 55, 0.12);
+  box-shadow: var(--card-shadow);
 }
 
 .login-card {
@@ -21,14 +23,15 @@
 
 .staff-eyebrow {
   margin: 0 0 8px;
-  color: #176b87;
+  color: var(--gold);
   font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 .staff-card h1,
 .staff-card h2 {
   margin: 0;
-  color: #1f2937;
+  color: var(--text);
 }
 
 .staff-card h2 {
@@ -38,7 +41,7 @@
 
 .staff-description {
   margin: 16px 0 28px;
-  color: #4b5563;
+  color: var(--text-muted);
   line-height: 1.5;
 }
 
@@ -54,9 +57,15 @@
 
 .staff-form input {
   padding: 12px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid var(--border-strong);
   border-radius: 6px;
+  background-color: var(--bg);
+  color: var(--text);
   font: inherit;
+}
+
+.staff-form input:focus {
+  border-color: var(--cyan);
 }
 
 .staff-primary-button {
@@ -65,14 +74,15 @@
   padding: 12px 24px;
   border: none;
   border-radius: 6px;
-  background-color: #176b87;
-  color: #ffffff;
+  background-color: var(--primary-action);
+  color: var(--on-primary);
   font: inherit;
+  font-weight: 600;
   cursor: pointer;
 }
 
 .staff-primary-button:hover {
-  background-color: #12566d;
+  background-color: var(--primary-hover);
 }
 
 .dashboard-header {
@@ -86,9 +96,10 @@
 .room-badge {
   white-space: nowrap;
   padding: 8px 12px;
+  border: 1px solid var(--gold);
   border-radius: 999px;
-  background-color: #e8f3f6;
-  color: #176b87;
+  background-color: var(--gold-soft);
+  color: var(--gold);
   font-weight: 700;
 }
 
@@ -96,9 +107,11 @@
   margin-bottom: 28px;
   padding: 24px;
   text-align: center;
+  border: 1px solid var(--cyan);
   border-radius: 8px;
-  background-color: #176b87;
-  color: #ffffff;
+  background-color: var(--surface-2);
+  box-shadow: var(--cyan-glow);
+  color: var(--text-muted);
 }
 
 .serving-section p {
@@ -106,7 +119,9 @@
 }
 
 .serving-section strong {
+  color: var(--cyan);
   font-size: 2.2rem;
+  text-shadow: var(--cyan-text-glow);
 }
 
 .waiting-list {
@@ -118,8 +133,8 @@
 .waiting-list span {
   padding: 10px 16px;
   border-radius: 6px;
-  background-color: #e8f3f6;
-  color: #176b87;
+  background-color: var(--surface-2);
+  color: var(--cyan);
   font-weight: 700;
 }
 
@@ -132,20 +147,21 @@
 
 .dashboard-metrics div {
   padding: 16px;
-  border: 1px solid #dbe7ec;
+  border: 1px solid var(--border);
   border-radius: 8px;
+  background-color: var(--surface-2);
 }
 
 .dashboard-metrics span {
   display: block;
-  color: #4b5563;
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
 .dashboard-metrics strong {
   display: block;
   margin-top: 8px;
-  color: #176b87;
+  color: var(--cyan);
 }
 
 .staff-primary-button:disabled,
@@ -158,18 +174,29 @@
 .tab-button,
 .cancel-button {
   padding: 8px 14px;
-  border: 1px solid #176b87;
+  border: 1px solid var(--border-strong);
   border-radius: 6px;
-  background-color: #ffffff;
-  color: #176b87;
+  background-color: var(--surface-2);
+  color: var(--text);
   font: inherit;
   cursor: pointer;
 }
 
+.staff-secondary-button:hover,
+.tab-button:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
 .cancel-button {
   margin-left: auto;
-  border-color: #b91c1c;
-  color: #b91c1c;
+  border-color: var(--primary);
+  background-color: transparent;
+  color: var(--danger-text);
+}
+
+.cancel-button:hover:not(:disabled) {
+  background-color: var(--danger-soft);
 }
 
 .header-actions {
@@ -186,16 +213,17 @@
 }
 
 .tab-button.active {
-  background-color: #176b87;
-  color: #ffffff;
+  border-color: var(--cyan);
+  background-color: var(--cyan-soft);
+  color: var(--cyan);
 }
 
 .staff-message {
   margin: 0 0 16px;
   padding: 10px 12px;
   border-radius: 6px;
-  background-color: #e6f4ea;
-  color: #166534;
+  background-color: var(--success-soft);
+  color: var(--success);
   font-weight: 700;
 }
 
@@ -210,21 +238,25 @@
   align-items: center;
   gap: 12px;
   padding: 10px 0;
-  border-bottom: 1px solid #e5edf1;
+  border-bottom: 1px solid var(--border);
 }
 
 .waiting-rows .position {
   min-width: 32px;
-  color: #6b7280;
+  color: var(--text-muted);
+}
+
+.waiting-rows strong {
+  color: var(--cyan);
 }
 
 .waiting-rows .patient-name {
-  color: #4b5563;
+  color: var(--text);
 }
 
 .waiting-rows .wait-estimate {
   margin-left: auto;
-  color: #6b7280;
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
@@ -245,12 +277,14 @@
 
 /* Complete & Call Next is the main action, so it stands out from the other two. */
 .action-row .staff-primary-button:last-child {
-  background-color: #15803d;
+  background-color: var(--success);
+  color: var(--bg);
   font-weight: 700;
 }
 
 .action-row .staff-primary-button:last-child:hover:not(:disabled) {
-  background-color: #166534;
+  background-color: var(--success);
+  filter: brightness(0.9);
 }
 
 .staff-card.wide {
@@ -260,7 +294,7 @@
 .staff-note {
   margin: 12px 0 0;
   text-align: center;
-  color: #6b7280;
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
@@ -292,20 +326,20 @@
 
 .stats-grid div {
   padding: 16px;
-  border: 1px solid #dbe7ec;
+  border: 1px solid var(--border);
   border-radius: 8px;
 }
 
 .stats-grid span {
   display: block;
-  color: #4b5563;
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
 .stats-grid strong {
   display: block;
   margin-top: 8px;
-  color: #176b87;
+  color: var(--cyan);
   font-size: 1.3rem;
 }
 
@@ -326,7 +360,7 @@
 .stats-table th,
 .stats-table td {
   padding: 10px 8px;
-  border-bottom: 1px solid #e5edf1;
+  border-bottom: 1px solid var(--border);
   white-space: nowrap;
 }
 
@@ -345,7 +379,7 @@
 
 .hour-label {
   min-width: 110px;
-  color: #4b5563;
+  color: var(--text-muted);
 }
 
 .hour-track {
@@ -358,7 +392,7 @@
   height: 14px;
   min-width: 4px;
   border-radius: 4px;
-  background-color: #176b87;
+  background-color: var(--cyan);
 }
 
 .hour-count {
