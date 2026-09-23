@@ -1,6 +1,6 @@
 import { UNAUTHORIZED_EVENT, clearStaffSession, getStaffToken } from './auth'
 
-const API_URL = 'http://localhost:5000/api'
+const API_URL = 'https://smartopd-queue-management.onrender.com/api'
 
 async function request(path, options = {}) {
   const token = getStaffToken()
